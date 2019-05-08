@@ -12,8 +12,6 @@ public class TestListener {
 
     @JmsListener(destination = "testmq789456")
     public void receive(Object msg) throws JMSException {
-
-        
         TextMessage textMessage = (TextMessage) msg;
         System.out.println("收到消息====" + textMessage.getText());
 
