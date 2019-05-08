@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.mapper.UserMapper">
+    <select id="selectOne" parameterType="java.lang.String" resultType="user">
+        select * from user WHERE  id = #{id}
+    </select>
+
+
+    <insert id="now">
+        INSERT  INTO  user  set  id = 222 ,date = NOW()
+    </insert>
+
+    <insert id="insert" parameterType="user">
+        INSERT  INTO  user  set  id = #{id} ,date = NOW()
+    </insert>
+
+</mapper>
